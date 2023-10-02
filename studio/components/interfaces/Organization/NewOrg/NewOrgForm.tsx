@@ -15,7 +15,7 @@ import {
   Toggle,
 } from 'ui'
 
-import { useParams } from 'common'
+import { getURL, useParams } from 'common'
 import { SpendCapModal } from 'components/interfaces/BillingV2'
 import InformationBox from 'components/ui/InformationBox'
 import Panel from 'components/ui/Panel'
@@ -23,7 +23,6 @@ import { useOrganizationCreateMutation } from 'data/organizations/organization-c
 import { invalidateOrganizationsQuery } from 'data/organizations/organizations-query'
 import { useStore } from 'hooks'
 import { BASE_PATH, PRICING_TIER_LABELS_ORG } from 'lib/constants'
-import { getURL } from 'lib/helpers'
 
 const ORG_KIND_TYPES = {
   PERSONAL: 'Personal',

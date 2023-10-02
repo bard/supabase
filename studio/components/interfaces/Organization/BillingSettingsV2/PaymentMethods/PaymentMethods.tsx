@@ -2,7 +2,7 @@ import { PermissionAction } from '@supabase/shared-types/out/constants'
 import { useQueryClient } from '@tanstack/react-query'
 import { useState } from 'react'
 
-import { useParams } from 'common'
+import { getURL, useParams } from 'common'
 import { AddNewPaymentMethodModal } from 'components/interfaces/BillingV2'
 import {
   ScaffoldSection,
@@ -18,7 +18,6 @@ import { useOrganizationPaymentMethodsQuery } from 'data/organizations/organizat
 import { useOrgSubscriptionQuery } from 'data/subscriptions/org-subscription-query'
 import { useCheckPermissions, useStore } from 'hooks'
 import { BASE_PATH } from 'lib/constants'
-import { getURL } from 'lib/helpers'
 import Link from 'next/link'
 import {
   Alert,

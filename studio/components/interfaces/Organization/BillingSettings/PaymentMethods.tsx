@@ -1,6 +1,6 @@
 import * as Tooltip from '@radix-ui/react-tooltip'
 import { PermissionAction } from '@supabase/shared-types/out/constants'
-import { useParams } from 'common'
+import { getURL, useParams } from 'common'
 import { useState } from 'react'
 import {
   Alert,
@@ -29,7 +29,6 @@ import { useOrganizationPaymentMethodDeleteMutation } from 'data/organizations/o
 import { useOrganizationPaymentMethodsQuery } from 'data/organizations/organization-payment-methods-query'
 import { useCheckPermissions, useStore } from 'hooks'
 import { BASE_PATH } from 'lib/constants'
-import { getURL } from 'lib/helpers'
 
 const PaymentMethods = () => {
   const { ui } = useStore()

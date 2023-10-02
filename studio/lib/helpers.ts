@@ -50,16 +50,6 @@ export const timeout = (ms: number) => {
   return new Promise((resolve) => setTimeout(resolve, ms))
 }
 
-export const getURL = () => {
-  const url =
-    process?.env?.NEXT_PUBLIC_SITE_URL && process.env.NEXT_PUBLIC_SITE_URL !== ''
-      ? process.env.NEXT_PUBLIC_SITE_URL
-      : process?.env?.VERCEL_URL && process.env.VERCEL_URL !== ''
-      ? process.env.VERCEL_URL
-      : 'https://supabase.com/dashboard'
-  return url.includes('http') ? url : `https://${url}`
-}
-
 /**
  * Generates a random string using alpha characters
  */

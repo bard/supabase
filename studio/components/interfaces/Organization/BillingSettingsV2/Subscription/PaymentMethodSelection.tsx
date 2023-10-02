@@ -2,13 +2,12 @@ import * as Tooltip from '@radix-ui/react-tooltip'
 import { PermissionAction } from '@supabase/shared-types/out/constants'
 import { useEffect, useMemo, useState } from 'react'
 
-import { useParams } from 'common'
+import { getURL, useParams } from 'common'
 import { AddNewPaymentMethodModal } from 'components/interfaces/BillingV2'
 import { useOrganizationCustomerProfileQuery } from 'data/organizations/organization-customer-profile-query'
 import { useOrganizationPaymentMethodsQuery } from 'data/organizations/organization-payment-methods-query'
 import { useCheckPermissions, useSelectedOrganization, useStore } from 'hooks'
 import { BASE_PATH } from 'lib/constants'
-import { getURL } from 'lib/helpers'
 import { Button, IconAlertCircle, IconCreditCard, IconLoader, IconPlus, Listbox } from 'ui'
 
 export interface PaymentMethodSelectionProps {

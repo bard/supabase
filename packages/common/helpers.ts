@@ -9,3 +9,13 @@ export const detectBrowser = () => {
     return 'Safari'
   }
 }
+
+export const getURL = () => {
+  const url =
+    process?.env?.NEXT_PUBLIC_SITE_URL && process.env.NEXT_PUBLIC_SITE_URL !== ''
+      ? process.env.NEXT_PUBLIC_SITE_URL
+      : process?.env?.VERCEL_URL && process.env.VERCEL_URL !== ''
+      ? process.env.VERCEL_URL
+      : 'https://supabase.com/dashboard'
+  return url.includes('http') ? url : `https://${url}`
+}
